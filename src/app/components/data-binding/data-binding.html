@@ -1,0 +1,32 @@
+<p>TS to HTML: String interpolation, property binding</p>
+<p>HTML to TS : event binding and two way data binding</p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <span>String Interpolation: {{ courseName }}</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span>Property Binding: <input type="text" [value]="courseName" /></span>
+      </td>
+      <td>
+        <input [type]="inputType" placeholder="Enter something" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span
+          >Event Binding:
+          <button (click)="updateCourseName('Java')">Update Course Name</button></span
+        >
+      </td>
+      <td>
+        <span
+          >Two Way Data Binding: <input [(ngModel)]="courseName" placeholder="Enter course name"
+        /></span>
+      </td>
+    </tr>
+  </tbody>
+</table>

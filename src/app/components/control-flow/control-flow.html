@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-3">
+    <input type="checkbox" [(ngModel)]="isOfferCodeAvailable" />Do you have offers?
+  </div>
+  @if (isOfferCodeAvailable) {
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Enter offer details" />
+    </div>
+  }
+</div>
+<div class="row">
+  <div class="col-3">
+    @if (idSuccessDivVisible()) {
+      <div class="bg-success">Success</div>
+    } @else {
+      <div class="bg-danger">Error</div>
+    }
+  </div>
+  <div class="col-3">
+    <button class="btn btn-success" (click)="idSuccessDivVisible.set(!idSuccessDivVisible())">
+      Toggle
+    </button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <input type="text" placeholder="Enter percentage" [(ngModel)]="percentage" />
+  </div>
+  <div class="col-3">
+    @if (percentage == 0) {
+      <span>Please enter percentage%</span>
+    } @else if (percentage >= 80) {
+      <span>You are passed with distinction</span>
+    } @else if (percentage >= 70) {
+      <span>You are passed with First class</span>
+    } @else if (percentage >= 50) {
+      <span>You are passed with Second class</span>
+    } @else if (percentage >= 35) {
+      <span>You are passed with Third class</span>
+    } @else {
+      <span>You are failed</span>
+    }
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <ul>
+      @for (offer of offersList; track $index) {
+        <li>{{ offer }}</li>
+      }
+    </ul>
+  </div>
+</div>

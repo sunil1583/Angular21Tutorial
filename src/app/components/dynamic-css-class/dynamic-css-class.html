@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-3">
+    <div class="p-4" [ngClass]="myClassName">This text will have a dynamic CSS class.</div>
+  </div>
+  <div class="col-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter CSS class name"
+      [(ngModel)]="myClassName"
+    />
+  </div>
+  <div class="col-3">
+    <button
+      class="btn"
+      [ngClass]="isActive ? 'btn-success' : 'btn-warning'"
+      (click)="isActive = !isActive"
+    >
+      Toggle Active
+    </button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <div class="p-4" [ngStyle]="{ 'background-color': bgColor }">
+      This text will have a dynamic background color.
+    </div>
+  </div>
+  <div class="col-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter background color"
+      [(ngModel)]="bgColor"
+    />
+  </div>
+</div>

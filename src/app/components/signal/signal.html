@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-3">
+    <h2>Signal</h2>
+    <p>{{ courseName }}</p>
+  </div>
+  <div class="col-3">
+    <p>{{ courseNameSignal() }}</p>
+  </div>
+  <div class="col-3">
+    <p>{{ student().name }}</p>
+    <p>{{ student().age }}</p>
+    <p>{{ student().city }}</p>
+  </div>
+  <div class="col-3">
+    <p>{{ city() }}</p>
+  </div>
+  <div class="col-3">
+    <p>{{ courseDuration() }}</p>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-primary" (click)="changeCourseSignalName()">Update Course Name</button>
+  </div>
+</div>

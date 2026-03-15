@@ -1,0 +1,47 @@
+<!-- <h1>Hallo Angular 21!</h1>
+<app-variables></app-variables>
+<br />
+<p></p>
+<app-data-binding></app-data-binding> -->
+<div class="d-flex">
+  <!-- Sidebar -->
+  <div class="sidebar bg-dark text-white p-3">
+    <h4 class="text-center">My App</h4>
+    <hr />
+
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLink="variables">Variables</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLink="databinding">Data Binding</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLink="signal">Signal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLink="controlFlow">Control-Flow</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLink="dynamicCss">Dynamic Css</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLink="users">Template Users Form</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLink="reactiveUsers">Reactive Users Form</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLink="signalUsers">Signal Users Form</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLink="batches">Batch REST API</a>
+      </li>
+    </ul>
+  </div>
+  <!-- Main Content -->
+  <div class="flex-grow-1 p-4">
+    <h2>Main Content</h2>
+    <router-outlet></router-outlet>
+  </div>
+</div>
